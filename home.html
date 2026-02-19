@@ -84,7 +84,44 @@
 
 
   
-<div class="w-11/12 mx-auto pt-3">
+<section class="w-11/12 mx-auto pt-3">
+   <h2 class="text-xl font-medium mb-3">Add Money</h2>
+
+    <div class="form">
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-3xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+
+<label class="label font-medium text-black/65">Select A Bank</label>
+            <select class="select rounded-[18px] bg-[#F4F5F7]  text-black/50">
+              <option disabled selected>Pick a color</option>
+              <option>IBBL</option>
+              <option>Shunali Bank</option>
+              <option>Dhaka Bank</option>
+            </select>
+
+            <label class="label font-medium text-black/65">Bank Account Number</label>
+            <input id="account-number" minlength="11" maxlength="11" type="number" class="input rounded-[18px] bg-[#F4F5F7]"
+              placeholder="Enter 11 digit number" />
+              
+    
+            <label class="label pt-2 font-medium text-black/65">Amount to Add</label>
+            <input id="add-amount" type="number" class="input rounded-[18px] bg-[#F4F5F7]"
+              placeholder="Add Amount to withdraw" />
+    
+            
+            <label class="label pt-2 font-medium text-black/65">Pin Number</label>
+            <input id="input-pin" minlength="4" maxlength="4" type="password" class="input rounded-[18px] bg-[#F4F5F7] "
+              placeholder="Enter 4 Digit Pin" />
+    
+            <button id="cashout-btn" class="btn btn-primary w-80 mt-4 rounded-[18px]">Withdraw Money</button>
+          </fieldset>
+        </div>
+      </div>
+    
+    </div>
+    </section>
+<section class="w-11/12 mx-auto pt-3">
    <h2 class="text-xl font-medium mb-3">Cash Out</h2>
 
     <div class="form ">
@@ -111,9 +148,10 @@
       </div>
     
     </div>
-    </div>
+    </section>
   
 
+    <script src="script/machine.js"></script>
 <script src="script/cashout.js"></script>
 </body>
 
