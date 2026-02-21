@@ -53,7 +53,7 @@
   </section>
 
   <section class="w-11/12 mx-auto pt-8 grid grid-cols-3 gap-4 pb-6">
-    <button href="" class="btn btn-primary btn-soft flex-col py-5 px-6  h-full rounded-[12px]">
+    <button onclick="showOnly('add-money')" href="" class="btn btn-primary btn-soft flex-col py-5 px-6  h-full rounded-[12px]">
       <img  src="assets/opt-1.png" alt="add money icon">
       <p>Add Money</p>
     </button>
@@ -84,7 +84,7 @@
 
 
   
-<section class="w-11/12 mx-auto pt-3">
+<section id="add-money" class="w-11/12 mx-auto pt-3 ">
    <h2 class="text-xl font-medium mb-3">Add Money</h2>
 
     <div class="form">
@@ -93,8 +93,8 @@
           <fieldset class="fieldset">
 
 <label class="label font-medium text-black/65">Select A Bank</label>
-            <select class="select rounded-[18px] bg-[#F4F5F7]  text-black/50">
-              <option disabled selected>Pick a color</option>
+            <select id="select-bank" class="select rounded-[18px] bg-[#F4F5F7]  text-black/50">
+              <option disabled selected>Select a bank</option>
               <option>IBBL</option>
               <option>Shunali Bank</option>
               <option>Dhaka Bank</option>
@@ -111,17 +111,18 @@
     
             
             <label class="label pt-2 font-medium text-black/65">Pin Number</label>
-            <input id="input-pin" minlength="4" maxlength="4" type="password" class="input rounded-[18px] bg-[#F4F5F7] "
+            <input id="add-pin" minlength="4" maxlength="4" type="password" class="input rounded-[18px] bg-[#F4F5F7] "
               placeholder="Enter 4 Digit Pin" />
     
-            <button id="cashout-btn" class="btn btn-primary w-80 mt-4 rounded-[18px]">Withdraw Money</button>
+            <button id="add-money-btn" class="btn btn-primary w-80 mt-4 rounded-[18px]">Add Money</button>
           </fieldset>
         </div>
       </div>
     
     </div>
     </section>
-<section class="w-11/12 mx-auto pt-3">
+    
+<section id="cashout" class="w-11/12 mx-auto pt-3 ">
    <h2 class="text-xl font-medium mb-3">Cash Out</h2>
 
     <div class="form ">
@@ -152,6 +153,7 @@
   
 
     <script src="script/machine.js"></script>
+    <script src="/script/addMoney.js"></script>
 <script src="script/cashout.js"></script>
 </body>
 
