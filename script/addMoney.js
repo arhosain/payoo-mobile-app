@@ -25,6 +25,23 @@ document.getElementById('add-money-btn').addEventListener("click", function () {
     // alert('add amount successful');
     alert(`add money success from ${bankName}  to ${new Date()}`)
     setBalance(newBalance);
+
+    // addTransaction 
+    // 1- history container ke niye ashbo
+
+    const history = document.getElementById('history-container')
+    // 2.create new div
+    const newHistory = document.createElement("div"); 
+    // 3. add innerHTML in new div 
+    newHistory.innerHTML = `
+     <div class="transaction-card p-5 bg-yellow-50">
+ 
+     add money success from ${bankName} ,acc-no ${accountNumber} at ${new Date()}
+  </div>
+    `;
+    // 4. newDiv add and append in history container
+
+    history.append(newHistory)
   } else {
     alert('add amount failed');
     return;
